@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<style>
+body{
+    padding: 0;
+    margin: 0
+}
+
+.container{
+    border: 1px solid;
+    width:1300px;
+    /* position:fixed; */
+    /* display: table; */
+    /* overflow: hidden; */
+}
+
+.left,.middle1,.middle2,.right {
+    background: pink;
+    width:300px;
+    height:300px;
+    float:left;
+    font-size: 30px;
+    color: #666;
+    margin: 10px;
+    text-align: center
+}
+
+.container:after{
+    content: "";
+    display: block;
+    clear: left;
+}
+</style>
+<body>
+    <div id="" class="container">
+        <div id="" class="left">J</div>
+        <div id="" class="middle1">M</div>
+        <div id="" class="middle2">j</div>
+        <div id="" class="right">m</div>
+    </div>
+</body>
+</html>
