@@ -1,4 +1,4 @@
-const base = "/Researching";
+const base = "/Researching/";
 
 module.exports = {
   base,
