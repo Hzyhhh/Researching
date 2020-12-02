@@ -12,6 +12,10 @@ module.exports = {
         path: "/",
         children: [
           {
+            title: "对比localStorage和indexDB",
+            path: "/indexDB/",
+          },
+          {
             title: "'冒烟测试'到底冒的是啥",
             path: "/smokeTest/",
           },
