@@ -154,7 +154,7 @@ var transaction = db.transaction(dbName, "readwrite");
 
 ## 兼容性
 
-![caniuse](images/caniuse.jpg)
+![caniuse](./images/caniuse.jpg)
 
 ## 总结
 
