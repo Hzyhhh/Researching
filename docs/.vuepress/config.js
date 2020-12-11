@@ -3,7 +3,7 @@ const base = "/Researching/";
 module.exports = {
   base,
   title: "zy-research",
-  description: "总结、吐槽空间",
+  description: "zy-research的个人总结空间",
   docsDir: "docs",
   themeConfig: {
     sidebar: [
