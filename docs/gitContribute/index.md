@@ -4,13 +4,13 @@
 
 开始以为是延迟，或者需要第二天才能看到自己提交的贡献点
 
-![utc](image/utc.jpg)
+![utc](./image/utc.jpg)
 
 后来发现并不是这样的。
 
 GitHub 的 Commit 记录和**本地的配置用户名以及邮箱与 GitHub 不一致**会导致不增加贡献！
 
-![ways](image/ways.jpg)
+![ways](./image/ways.jpg)
 
 后来发现因为是在公司提交代码，所以在公司配置的默认是是公司的邮箱，而不是自己的邮箱 😅 干哦~
 
@@ -27,8 +27,8 @@ GitHub 的 Commit 记录和**本地的配置用户名以及邮箱与 GitHub 不�
 
 ```
 cd .git
-git config user.name "ordinaryA"
-git config user.email "353458582@qq.com"
+git config user.name "Hzyhhh"
+git config user.email "799309084@qq.com"
 ```
 
 然后通过执行命令可以查看 config 文件检查是否修改成功：
