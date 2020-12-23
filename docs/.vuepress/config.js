@@ -39,6 +39,10 @@ module.exports = {
             title: "git提交未计算贡献(未显示小绿点)的解决办法",
             path: "/gitContribute/",
           },
+          {
+            title: "面试题",
+            path: "/interview/",
+          },
         ],
       },
     ],
