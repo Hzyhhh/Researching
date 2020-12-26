@@ -55,6 +55,7 @@ DOMContentLoaded 事件被触发，而无需等待样式表、图像和子框架
 Load 事件是当所有资源加载完成后触发的。
 ```
 
+
 参考文献： [《DOMContentLoaded 事件/Load 事件的区别？》](https://www.jianshu.com/p/ca8dae435a2c)
 
 ---
