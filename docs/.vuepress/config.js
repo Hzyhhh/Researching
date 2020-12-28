@@ -43,6 +43,10 @@ module.exports = {
             title: "面试题",
             path: "/interview/",
           },
+          {
+            title: "说说",
+            path: "/myZoom/",
+          },
         ],
       },
     ],
