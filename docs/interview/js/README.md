@@ -31,6 +31,7 @@ function getCalculateBounce(level:"A"|"B"|"C"|"D",salary:number){
 ```ts
 /**
  * 策略模式重构
+ *
  */
 
 class A {
