@@ -1,5 +1,64 @@
 # JS
 
+**模拟实现 Object.freeze**
+
+**Object.freeze**：
+
+`Object.freeze` 方法可以冻结一个对象，冻结指的是不能向这个对象添加新的属性，不能修改其已有属性的值，不能删除已有属性，以及不能修改该对象已有属性的可枚举性、可配置性、可写性。也就是说，这个对象永远是不可变的。该方法返回被冻结的对象。
+
+用法：
+
+```ts
+const obj = {
+  name: "yd",
+  info: {
+    address: "beijing",
+  },
+};
+const freezeObj = Object.freeze(obj);
+freezeObj.name = "new name";
+console.log(freezeObj.name); // 仍然是yd
+// 严格模式会报错
+("use strict");
+freezeObj.name = "new name"; // TypeError
+//Uncaught TypeError: Cannot assign to read only property 'name' of object '#<Object>'
+
+// 但是info 是没有被冻结的
+freezeObj.info.newName = "ydshenzhen";
+console.log(freezeObj.info.newName); // ydshenzhen
+```
+
+参考实现：
+
+```ts
+function myFreeze(obj) {
+  // 判断参数是否为Object类型
+  if (obj instanceof Object) {
+    // 1;
+    for (let key in obj) {
+      if (obj.hasOwnProperty(key)) {
+        Object.defineProperty(obj, key, {
+          writable: false, // 设置只读
+        });
+        Object.seal(obj); // 封闭对象
+      }
+    }
+    // 2;
+    Object.keys(obj).forEach((i) => {
+      if (obj[i]) {
+        Object.defineProperty(obj, i, {
+          writable: false,
+        });
+        Object.seal(obj); // 封闭对象
+      }
+    });
+  }
+  return obj;
+}
+```
+
+---
+
 **js 实现一个策略模式**
 
 **策略模式**：
