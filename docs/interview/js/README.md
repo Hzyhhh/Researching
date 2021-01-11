@@ -1,5 +1,33 @@
 # JS
 
+**根据数字生成对应数组**
+
+例：
+
+```js
+7 => [0,1,2,3,4,5,6]
+```
+
+方法一(推荐)：
+
+```ts
+function numToArr(num: number) {
+  return [...new Array(num).keys()];
+}
+```
+
+方法二：
+
+```ts
+function numToArr(num: number) {
+  const target: number = [];
+  for (let i = 0; i < num; i++) {
+    target.push(i);
+  }
+  return target;
+}
+```
+
 **模拟实现 Object.freeze**
 
 **Object.freeze**：
