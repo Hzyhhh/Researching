@@ -1,5 +1,63 @@
 # JS
 
+**回调地狱**
+
+你有没见过这样的函数：
+
+```js
+function A() {
+  let res;
+  canvas.toBlob((res) => {
+    const params = res;
+    fetchxxx("method", params, (res) => {
+      // xxx……
+      res = res;
+    });
+  });
+}
+```
+
+这种通过不断在回调函数里调用下一个函数的操作在 es5 里面很常见。
+
+如何解决：
+
+`async/await`:
+
+```js
+async function fetchBlob() {
+  const res = await new Promise((res, rej) => {
+    canvas.toBlob((blob) => {
+      res(blob);
+    });
+  });
+
+  return res;
+}
+
+async function getFromMethod(blob) {
+  return await new Promise((res, rej) => {
+    fetchxxx("method", blob, (result) => {
+      if (result) {
+        res(result);
+      } else {
+        rej();
+      }
+    });
+  });
+}
+
+const blob = await fetchBlob();
+const res = await getFromMethod(blob);
+```
+
+可以看到，通过封装了两个`async/await`异步函数完美的解决了地狱回调的问题。
+
+同时，还能获取到异步函数的状态机返回状态`pending`。
+
+根据这个状态进行`loading`以及`try/catch`操作
+
+---
+
 **根据数字生成对应数组**
 
 例：
@@ -27,6 +85,8 @@ function numToArr(num: number) {
   return target;
 }
 ```
+
+---
 
 **模拟实现 Object.freeze**
 
