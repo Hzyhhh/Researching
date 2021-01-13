@@ -1,5 +1,63 @@
 # JS
 
+**说一说你对 this 的理解，箭头函数解决了什么问题？**
+
+this 表现
+
+```js
+/**
+ * 🔴case 1: 全局作用域下的函数
+ */
+function foo() {
+  console.log(this);
+}
+
+foo(); // globalThis
+new foo(); // foo{}
+
+/**
+ * 🔴case 2: 对象方法
+ */
+var bar = {
+  name: "hello",
+  printName: function () {
+    console.log(this.name);
+  },
+};
+
+bar.printName(); // hello
+const _print = bar.printName;
+_print(); // undefined
+
+/**
+ * 🔴 case 3: bind,call,apply
+ */
+const _foo = foo.bind({ a: 1 });
+_foo(); // {a: 1}
+
+/**
+ * 🔴case 4: 嵌套函数
+ */
+function baz() {
+  console.log("outer this:", this);
+  function inner() {
+    console.log("inner this:", this);
+  }
+
+  inner();
+}
+
+baz.call({ a: 1 }); // outer this: {a: 1}
+// inner this: globalThis
+```
+- Case 1:  函数常规调用 this 指向 globalThis，使用 new 调用时指向刚创建的对象
+- Case 2: 以对象成员的形式调用时，this 指向所在的对象。但是非成员访问符调用时还是指向 globalThis
+- Case 3： 可以通过 bind 显式指定 this
+- Case 4：嵌套函数调用，this 指向 globalThis
+
+分析：
+---
+
 **回调地狱**
 
 你有没见过这样的函数：
