@@ -12,6 +12,10 @@ module.exports = {
         path: "/",
         children: [
           {
+            title: "截屏插件显示异常踩坑修复解决流水",
+            path: "/capture-problem/",
+          },
+          {
             title: "对比localStorage和indexDB",
             path: "/indexDB/",
           },
