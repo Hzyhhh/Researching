@@ -4,10 +4,18 @@
 
 _2020-1-28_
 
+[前端 20 年](https://zhuanlan.zhihu.com/p/68030183)
+
+```
+一篇介绍所以主流技术开端的历史文, 非常好看, 值得推荐!
+```
+
+_2020-1-28_
+
 `decodeUriComponent`
 
 ```
-qq客户端打开webview会将url encode, 需要decodeUriComponent解码 
+qq客户端打开webview会将url encode, 需要decodeUriComponent解码
 ```
 
 _2020-1-27_
