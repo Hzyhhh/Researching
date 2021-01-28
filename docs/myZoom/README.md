@@ -2,6 +2,14 @@
 
 这部分没有干货，主要是用来记录发表当下的心情。
 
+_2020-1-28_
+
+`decodeUriComponent`
+
+```
+qq客户端打开webview会将url encode, 需要decodeUriComponent解码 
+```
+
 _2020-1-27_
 
 ```
