@@ -12,6 +12,10 @@ module.exports = {
         path: "/",
         children: [
           {
+            title: "passive 事件处理器",
+            path: "/passive/",
+          },
+          {
             title: "截屏插件显示异常踩坑修复解决流水",
             path: "/capture-problem/",
           },

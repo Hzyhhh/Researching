@@ -6,6 +6,8 @@
 
 不定期更新，整理不易，希望 star 支持一下。感谢各位大佬。
 
+### [passive 事件处理器](/capture-problem/)
+
 ### [截屏插件显示异常踩坑修复解决流水](/capture-problem/)
 
 ### [对比 localStorage 和 indexDB](/indexDB/)
