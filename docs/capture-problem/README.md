@@ -1,6 +1,6 @@
 # 无良 preact-router 截图插件拦腰截半!
 
-`html2canvas`和`dom-to-image`作为前端截图插件应该算是挺好用的了,在遵信[规范][https://github.com/niklasvh/html2canvas]大部分情况下都不会有 bug 其使用也十分简单
+`html2canvas`和`dom-to-image`作为前端截图插件应该算是挺好用的了,在遵信[规范](https://github.com/niklasvh/html2canvas)大部分情况下都不会有 bug 其使用也十分简单
 
 ```ts
 import html2canvas from "html2canvas";
