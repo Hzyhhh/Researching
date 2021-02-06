@@ -12,6 +12,10 @@ module.exports = {
         path: "/",
         children: [
           {
+            title: "Generator 生成器与协程",
+            path: "/generator/",
+          },
+          {
             title: "passive 事件处理器",
             path: "/passive/",
           },
