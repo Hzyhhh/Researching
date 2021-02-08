@@ -6,6 +6,8 @@
 
 不定期更新，整理不易，希望 star 支持一下。感谢各位大佬。
 
+### [Generator 生成器与协程](/js-type/)
+
 ### [Generator 生成器与协程](/generator/)
 
 ### [passive 事件处理器](/capture-problem/)
