@@ -12,6 +12,10 @@ module.exports = {
         path: "/",
         children: [
           {
+            title: "怎么判断 JavaScript 的各种类型--回字的六种写法",
+            path: "/js-type/",
+          },
+          {
             title: "Generator 生成器与协程",
             path: "/generator/",
           },
