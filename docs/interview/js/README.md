@@ -1,5 +1,35 @@
 # JS
 
+**实现一个new？**
+
+```js
+/**
+ * new 的实现分为四个步骤
+ * 1. 函数内创建一个新的对象
+ * 2. 将新对象的原型链接到传入的构造函数原型上
+ * 3. 将新对象作为this和arguments传到构造函数的入参中
+ * 4.返回步骤3产生的对象或this
+ */
+function fakeNew(){
+  // 1. 创建一个新对象
+  // 或者 Object.create()
+  const obj = {}
+
+  // 将构造函数shift出来
+  const constructor = [].shift.apply(arguments)
+  // 2.将新对象的原型链接到构造函数的原型上
+  obj.__proto__ = constructor.prototype
+
+  // 3.将新对象作为this和arguments传到构造函数的入参中
+  const res = constructor.apply(obj, arguments)
+
+  // 返回
+  // 注意：如果构造函数返回基本类型值，则不影响，还是返回 this
+  return typeof res === 'object' ? res : obj
+}
+
+```
+
 **说一说你对 this 的理解，箭头函数解决了什么问题？**
 
 this 表现
