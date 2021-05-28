@@ -1,7 +1,4 @@
-const base = "/Researching/";
-
 module.exports = {
-  base,
   title: "zy-research",
   description: "zy-research的个人总结空间",
   docsDir: "docs",
