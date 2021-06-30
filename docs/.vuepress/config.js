@@ -9,6 +9,10 @@ module.exports = {
         path: "/",
         children: [
           {
+            title: "React Native 能支持 Typescript 到什么地步?",
+            path: "/supportRN/",
+          },
+          {
             title: "怎么判断 JavaScript 的各种类型--回字的六种写法",
             path: "/js-type/",
           },
