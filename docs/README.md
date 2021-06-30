@@ -4,9 +4,15 @@
 
 文档倒序更新
 
+近期计划：
+
+- React Native 能支持 Typescript 到什么地步?
+
+- 解决项目中*mobx4*Provider 的数据注入异常的问题
+
 不定期更新，整理不易，希望 star 支持一下。感谢各位大佬。
 
-### [Generator 生成器与协程](/js-type/)
+### [类型判断](/js-type/)
 
 ### [Generator 生成器与协程](/generator/)
 
