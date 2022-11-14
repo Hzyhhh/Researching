@@ -6,7 +6,7 @@ yarn run build
 
 cd docs/.vuepress/dist
 
-echo 'cion.fun' > CNAME
+echo 'cion.top' > CNAME
 
 git init
 git add -A
