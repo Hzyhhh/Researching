@@ -2,7 +2,7 @@
 
 set -e
 
-yarn run build
+# yarn run build
 
 cd docs/.vuepress/dist
 

@@ -1,6 +1,6 @@
 module.exports = {
-  title: "zy-research",
-  description: "zy-research的个人总结空间",
+  title: "黄梓阳的博客",
+  description: "阳阳的博客",
   docsDir: "docs",
   themeConfig: {
     sidebar: [
@@ -61,7 +61,7 @@ module.exports = {
             path: "/interview/",
           },
           {
-            title: "说说",
+            title: "hzyhhh",
             path: "/myZoom/",
           },
         ],

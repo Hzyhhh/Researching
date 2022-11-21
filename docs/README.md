@@ -12,6 +12,8 @@
 
 不定期更新，整理不易，希望 star 支持一下。感谢各位大佬。
 
+### [React Native 能支持 Typescript 到什么地步?](/supportRN/)
+
 ### [类型判断](/js-type/)
 
 ### [Generator 生成器与协程](/generator/)
