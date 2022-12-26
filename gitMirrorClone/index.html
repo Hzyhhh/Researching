@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>git 镜像克隆仓库 | 黄梓阳的博客</title>
+    <meta name="generator" content="VuePress 1.7.1">
+    
+    <meta name="description" content="阳阳的博客">
+    
+    <link rel="preload" href="/assets/css/0.styles.992cb7aa.css" as="style"><link rel="preload" href="/assets/js/app.f2e41950.js" as="script"><link rel="preload" href="/assets/js/2.cb8fbaf3.js" as="script"><link rel="preload" href="/assets/js/19.e21d4cdf.js" as="script"><link rel="prefetch" href="/assets/js/10.2c5224cd.js"><link rel="prefetch" href="/assets/js/11.5975f2b7.js"><link rel="prefetch" href="/assets/js/12.87de11c1.js"><link rel="prefetch" href="/assets/js/13.95b5454a.js"><link rel="prefetch" href="/assets/js/14.f7f7f42b.js"><link rel="prefetch" href="/assets/js/15.cf350c18.js"><link rel="prefetch" href="/assets/js/16.836a5df4.js"><link rel="prefetch" href="/assets/js/17.fcea4328.js"><link rel="prefetch" href="/assets/js/18.05e21924.js"><link rel="prefetch" href="/assets/js/20.5f5cb17a.js"><link rel="prefetch" href="/assets/js/21.9691bc8d.js"><link rel="prefetch" href="/assets/js/22.4ecc6d1b.js"><link rel="prefetch" href="/assets/js/23.8d9641d2.js"><link rel="prefetch" href="/assets/js/24.2a0743bb.js"><link rel="prefetch" href="/assets/js/25.c10d902e.js"><link rel="prefetch" href="/assets/js/26.189becf7.js"><link rel="prefetch" href="/assets/js/27.a150da85.js"><link rel="prefetch" href="/assets/js/3.5d334765.js"><link rel="prefetch" href="/assets/js/4.5a8b67af.js"><link rel="prefetch" href="/assets/js/5.78ad3186.js"><link rel="prefetch" href="/assets/js/6.c4bc3b4c.js"><link rel="prefetch" href="/assets/js/7.8fa4c534.js"><link rel="prefetch" href="/assets/js/8.7a560c51.js"><link rel="prefetch" href="/assets/js/9.02a146d0.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.992cb7aa.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">黄梓阳的博客</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <!----></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><!---->  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><a href="/" class="sidebar-heading clickable router-link-active open"><span>文档</span> <span class="arrow down"></span></a> <ul class="sidebar-links sidebar-group-items"><li><a href="/supportRN/" class="sidebar-link">React Native 能支持 Typescript 到什么地步?</a></li><li><a href="/js-type/" class="sidebar-link">怎么判断 JavaScript 的各种类型--回字的六种写法</a></li><li><a href="/generator/" class="sidebar-link">Generator 生成器与协程</a></li><li><a href="/passive/" class="sidebar-link">passive 事件处理器</a></li><li><a href="/capture-problem/" class="sidebar-link">截屏插件显示异常踩坑修复解决流水</a></li><li><a href="/indexDB/" class="sidebar-link">对比localStorage和indexDB</a></li><li><a href="/smokeTest/" class="sidebar-link">'冒烟测试'到底冒的是啥</a></li><li><a href="/CSSGrid/" class="sidebar-link">CSS Grid</a></li><li><a href="/BFC/" class="sidebar-link">BFC</a></li><li><a href="/performance/" class="sidebar-link">性能优化的方案</a></li><li><a href="/gitMirrorClone/" aria-current="page" class="active sidebar-link">git 镜像克隆仓库</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/gitMirrorClone/#准备" class="sidebar-link">准备</a></li><li class="sidebar-sub-header"><a href="/gitMirrorClone/#总结" class="sidebar-link">总结</a></li></ul></li><li><a href="/gitContribute/" class="sidebar-link">git提交未计算贡献(未显示小绿点)的解决办法</a></li><li><a href="/interview/" class="sidebar-link">面试题</a></li><li><a href="/myZoom/" class="sidebar-link">hzyhhh</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="git-镜像克隆仓库"><a href="#git-镜像克隆仓库" class="header-anchor">#</a> git 镜像克隆仓库</h1> <p>哪天你如果发现在 github 的项目需要原封不动的迁移到 gitlab 的时候。这篇实用的短文可能会对你产生帮助。</p> <h2 id="准备"><a href="#准备" class="header-anchor">#</a> 准备</h2> <p>源项目仓库： https://github.com/Hzyhhh/xxx.git
+目标仓库： http://gitlab.xxx.com:82/xx/xxxxx.git</p> <p>首先确保目标仓库是空的或者 author 和 committer 跟源项目的是同一个人的情况下。</p> <p>源仓库：</p> <div class="language- extra-class"><pre class="language-text"><code>git clone --bare https://github.com/Hzyhhh/xxx.git
+
+git push --mirror http://gitlab.xxx.com:82/xx/xxxxx.git
+</code></pre></div><p>通过这两步操作就能镜像从源仓库建议提交记录到目标仓库拉！</p> <h2 id="总结"><a href="#总结" class="header-anchor">#</a> 总结</h2> <p>对于我这种喜欢将贡献记录在github上的人来说，这个操作完美的将我的工作内容于贡献内容结合到了一起。</p> <p>不过可惜的是暂时还没找到办法将contribute也同时迁移到gitlab上。</p> <p>我猜测导致这个的原因有可能是跟gitlab的贡献机制有关。</p> <p>如果有知道的同学请给我提issues。</p></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/performance/" class="prev">
+        性能优化的方案
+      </a></span> <span class="next"><a href="/gitContribute/">
+        git提交未计算贡献(未显示小绿点)的解决办法
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.f2e41950.js" defer></script><script src="/assets/js/2.cb8fbaf3.js" defer></script><script src="/assets/js/19.e21d4cdf.js" defer></script>
+  </body>
+</html>
