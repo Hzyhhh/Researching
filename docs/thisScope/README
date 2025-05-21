@@ -1,0 +1,100 @@
+箭头函数的 this 捕获机制
+在 JavaScript 中，箭头函数的 this 捕获机制是一个常见的概念，但也是容易引起混淆的地方。本文将详细探讨箭头函数的 this 捕获机制，并通过示例帮助读者更好地理解。
+1. 普通函数与箭头函数的 this 指向
+1.1 普通函数的 this 指向
+普通函数的 this 指向是动态的，取决于函数的调用方式：
+作为对象方法调用：
+当一个普通函数作为对象的方法被调用时，this 指向该对象。
+JavaScript
+Copy
+var obj = {
+    value: 10,
+    func: function() {
+        console.log(this.value);
+    }
+};
+
+obj.func();  // 输出 10
+作为普通函数调用：
+当一个普通函数作为普通函数被调用时，this 指向全局对象（在浏览器中是 window，在 Node.js 中是 global）。
+JavaScript
+Copy
+var obj = {
+    value: 10,
+    func: function() {
+        console.log(this.value);
+    }
+};
+
+var func = obj.func;
+func();  // 输出 undefined
+使用 .call 或 .apply 调用：
+可以通过 .call 或 .apply 方法显式指定 this 的值。
+JavaScript
+Copy
+var obj = {
+    value: 10,
+    func: function() {
+        console.log(this.value);
+    }
+};
+
+var func = obj.func;
+func.call(obj);  // 输出 10
+1.2 箭头函数的 this 捕获
+箭头函数没有自己的 this 上下文，它会捕获其定义时所在上下文的 this 值。具体来说：
+定义时的上下文：
+箭头函数会捕获其定义时的词法作用域中的 this 值。
+词法作用域：
+词法作用域是指函数在代码中定义的位置。箭头函数会捕获其定义时的词法作用域中的 this 值。
+2. 示例分析
+2.1 箭头函数定义在全局作用域中
+JavaScript
+Copy
+var value = 20;
+
+var obj = {
+    value: 10,
+    func: () => {
+        console.log(this.value);
+    }
+};
+
+obj.func();  // 输出 20
+解释：
+func 是一个箭头函数，定义在全局作用域中。
+箭头函数捕获了全局作用域中的 this 值，即全局对象。
+全局对象中有一个 value 属性，值为 20。
+因此，this.value 输出 20。
+2.2 箭头函数定义在普通函数中
+JavaScript
+Copy
+var value = 20;
+
+var obj = {
+    value: 10,
+    func: function() {
+        var innerFunc = () => {
+            console.log(this.value);
+        };
+        innerFunc();
+    }
+};
+
+obj.func();  // 输出 10
+解释：
+func 是一个普通函数，定义在 obj 对象中。
+在 func 中定义了一个箭头函数 innerFunc。
+箭头函数 innerFunc 捕获了其定义时所在上下文的 this 值，即 func 的 this 值。
+由于 func 是作为 obj 的方法被调用的，this 指向 obj。
+因此，this.value 输出 10。
+3. 箭头函数的 this 捕获机制
+箭头函数的 this 捕获机制可以简单理解为：箭头函数会捕获其定义时所在上下文的 this 值。如果找不到，最终会使用全局对象的 this 值。
+3.1 修正后的理解
+逐级向上查找：
+箭头函数会捕获其定义时所在上下文的 this 值。
+如果箭头函数定义在另一个函数中，它会捕获外层函数的 this 值。
+如果箭头函数定义在全局作用域中，它会捕获全局对象的 this 值。
+4. 总结
+箭头函数的 this 捕获机制是基于其定义时的词法作用域，而不是动态的调用上下文。箭头函数会捕获其定义时所在上下文的 this 值，如果找不到，最终会使用全局对象的 this 值。
+希望本文能帮助你更好地理解箭头函数的 this 捕获机制。
