@@ -6,7 +6,7 @@ set -e
 
 cd docs/.vuepress/dist
 
-echo 'cion.top' > CNAME
+echo 'blog.cion.asia' > CNAME
 
 git init
 git add -A
