@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>怎么判断 JavaScript 的各种类型--回字的六种写法 | 黄梓阳的博客</title>
+    <meta name="generator" content="VuePress 1.9.10">
+    
+    <meta name="description" content="阳阳的博客">
+    
+    <link rel="preload" href="/assets/css/0.styles.f3e2e2a4.css" as="style"><link rel="preload" href="/assets/js/app.54f8f1fa.js" as="script"><link rel="preload" href="/assets/js/2.2f22998c.js" as="script"><link rel="preload" href="/assets/js/1.0b444f9c.js" as="script"><link rel="preload" href="/assets/js/40.dec6d238.js" as="script"><link rel="prefetch" href="/assets/js/10.857b132a.js"><link rel="prefetch" href="/assets/js/11.70ce96a9.js"><link rel="prefetch" href="/assets/js/12.aeb15f03.js"><link rel="prefetch" href="/assets/js/13.9afedd12.js"><link rel="prefetch" href="/assets/js/14.a7ca9f66.js"><link rel="prefetch" href="/assets/js/15.f4a73f35.js"><link rel="prefetch" href="/assets/js/16.5992fb4c.js"><link rel="prefetch" href="/assets/js/17.4ae81fed.js"><link rel="prefetch" href="/assets/js/18.1198418d.js"><link rel="prefetch" href="/assets/js/19.522653f4.js"><link rel="prefetch" href="/assets/js/20.9a129639.js"><link rel="prefetch" href="/assets/js/21.319a0f2c.js"><link rel="prefetch" href="/assets/js/22.6fbeeff6.js"><link rel="prefetch" href="/assets/js/23.06aef352.js"><link rel="prefetch" href="/assets/js/24.ee7cd5df.js"><link rel="prefetch" href="/assets/js/25.cb651ac7.js"><link rel="prefetch" href="/assets/js/26.8f918548.js"><link rel="prefetch" href="/assets/js/27.b030d040.js"><link rel="prefetch" href="/assets/js/28.8131c166.js"><link rel="prefetch" href="/assets/js/29.9e65e1f0.js"><link rel="prefetch" href="/assets/js/3.953f4699.js"><link rel="prefetch" href="/assets/js/30.3908f4ee.js"><link rel="prefetch" href="/assets/js/31.e4606d04.js"><link rel="prefetch" href="/assets/js/32.937a6f11.js"><link rel="prefetch" href="/assets/js/33.543a5aa9.js"><link rel="prefetch" href="/assets/js/34.68e811e0.js"><link rel="prefetch" href="/assets/js/35.34bad009.js"><link rel="prefetch" href="/assets/js/36.dcc348b0.js"><link rel="prefetch" href="/assets/js/37.f19ecafd.js"><link rel="prefetch" href="/assets/js/38.15194dcb.js"><link rel="prefetch" href="/assets/js/39.f7c64b24.js"><link rel="prefetch" href="/assets/js/4.fb7d3d5a.js"><link rel="prefetch" href="/assets/js/41.56f518a6.js"><link rel="prefetch" href="/assets/js/42.e33010d7.js"><link rel="prefetch" href="/assets/js/5.2731d5ee.js"><link rel="prefetch" href="/assets/js/6.1a2ed5d7.js"><link rel="prefetch" href="/assets/js/7.6e421a42.js"><link rel="prefetch" href="/assets/js/vendors~docsearch.232f1e4d.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.f3e2e2a4.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">黄梓阳的博客</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <!----></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><!---->  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><a href="/" class="sidebar-heading clickable router-link-active open"><span>文档</span> <span class="arrow down"></span></a> <ul class="sidebar-links sidebar-group-items"><li><a href="/supportRN/" class="sidebar-link">React Native 能支持 Typescript 到什么地步?</a></li><li><a href="/js-type/" aria-current="page" class="active sidebar-link">怎么判断 JavaScript 的各种类型--回字的六种写法</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/js-type/#怎么判断-javascript-的各种类型-回字的六种写法" class="sidebar-link">怎么判断 JavaScript 的各种类型--回字的六种写法</a></li></ul></li><li><a href="/generator/" class="sidebar-link">Generator 生成器与协程</a></li><li><a href="/passive/" class="sidebar-link">passive 事件处理器</a></li><li><a href="/capture-problem/" class="sidebar-link">截屏插件显示异常踩坑修复解决流水</a></li><li><a href="/indexDB/" class="sidebar-link">对比localStorage和indexDB</a></li><li><a href="/smokeTest/" class="sidebar-link">'冒烟测试'到底冒的是啥</a></li><li><a href="/CSSGrid/" class="sidebar-link">CSS Grid</a></li><li><a href="/BFC/" class="sidebar-link">BFC</a></li><li><a href="/performance/" class="sidebar-link">性能优化的方案</a></li><li><a href="/gitMirrorClone/" class="sidebar-link">git 镜像克隆仓库</a></li><li><a href="/gitContribute/" class="sidebar-link">git提交未计算贡献(未显示小绿点)的解决办法</a></li><li><a href="/interview/" class="sidebar-link">面试题</a></li><li><a href="/myZoom/" class="sidebar-link">hzyhhh</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h2 id="怎么判断-javascript-的各种类型-回字的六种写法"><a href="#怎么判断-javascript-的各种类型-回字的六种写法" class="header-anchor">#</a> 怎么判断 JavaScript 的各种类型--回字的六种写法</h2> <p>这个问题的讨论基础是建立在 js 的七种内置类型上的：</p> <div class="language- extra-class"><pre class="language-text"><code>String
+Number
+Undefined
+Null
+Boolean
+Symbol
+Object
+</code></pre></div><p>在判断类型上，我们有以下几种办法。</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">typeof</span>
+<span class="token class-name">Object</span><span class="token punctuation">.</span>prototype<span class="token punctuation">.</span><span class="token function">toString</span><span class="token punctuation">.</span><span class="token function">call</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+constructor
+<span class="token keyword">instanceof</span>
+</code></pre></div><h3 id="typeof"><a href="#typeof" class="header-anchor">#</a> typeof</h3> <p>对于大多数基本类型，使用<code>typeof</code>是比较实用的:</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">typeof</span> <span class="token keyword">undefined</span><span class="token comment">// &quot;undefined&quot;</span>
+
+<span class="token keyword">typeof</span> <span class="token boolean">true</span>	<span class="token comment">// &quot;boolean&quot;</span>
+
+<span class="token keyword">typeof</span> <span class="token number">1</span> <span class="token comment">// &quot;number&quot;</span>
+
+<span class="token keyword">typeof</span> <span class="token string">&quot;1&quot;</span>	<span class="token comment">// &quot;string&quot;</span>
+
+<span class="token keyword">typeof</span> <span class="token punctuation">{</span><span class="token literal-property property">a</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">}</span> <span class="token comment">// &quot;object&quot;</span>
+
+<span class="token keyword">typeof</span> <span class="token function">Symbol</span><span class="token punctuation">(</span><span class="token punctuation">)</span>	 <span class="token comment">// &quot;symbol&quot;</span>
+
+</code></pre></div><p>为什么是大多数呢？因为null在这里的结果是出乎意料的</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">typeof</span> <span class="token keyword">null</span>	<span class="token comment">// &quot;object&quot;</span>
+</code></pre></div><h3 id="tostring-call"><a href="#tostring-call" class="header-anchor">#</a> .toString.call()</h3> <p>使用这种方法无论是判断基本类型还是复杂类型，都是最准确的：</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">const</span> toString <span class="token operator">=</span> <span class="token class-name">Object</span><span class="token punctuation">.</span>prototype<span class="token punctuation">.</span>toString
+
+<span class="token function">toString</span><span class="token punctuation">.</span><span class="token function">call</span><span class="token punctuation">(</span><span class="token keyword">null</span><span class="token punctuation">)</span><span class="token comment">// &quot;[object Null]&quot;</span>
+
+<span class="token function">toString</span><span class="token punctuation">.</span><span class="token function">call</span><span class="token punctuation">(</span><span class="token keyword">undefined</span><span class="token punctuation">)</span><span class="token comment">// &quot;[object Undefined]&quot;</span>
+
+<span class="token function">toString</span><span class="token punctuation">.</span><span class="token function">call</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token comment">// &quot;[object Number]&quot;</span>
+
+<span class="token function">toString</span><span class="token punctuation">.</span><span class="token function">call</span><span class="token punctuation">(</span><span class="token boolean">true</span><span class="token punctuation">)</span><span class="token comment">// &quot;[object Boolean]&quot;</span>
+
+<span class="token function">toString</span><span class="token punctuation">.</span><span class="token function">call</span><span class="token punctuation">(</span><span class="token string">'1'</span><span class="token punctuation">)</span><span class="token comment">// &quot;[object String]&quot;</span>
+
+<span class="token function">toString</span><span class="token punctuation">.</span><span class="token function">call</span><span class="token punctuation">(</span><span class="token punctuation">{</span><span class="token literal-property property">a</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token comment">// &quot;[object Object]&quot;</span>
+
+<span class="token function">toString</span><span class="token punctuation">.</span><span class="token function">call</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">)</span>	<span class="token comment">// &quot;[object Array]&quot;</span>
+
+<span class="token function">toString</span><span class="token punctuation">.</span><span class="token function">call</span><span class="token punctuation">(</span><span class="token function">Symbol</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token comment">// &quot;[object Symbol]&quot;</span>
+
+<span class="token function">toString</span><span class="token punctuation">.</span><span class="token function">call</span><span class="token punctuation">(</span><span class="token keyword">function</span> <span class="token function">a</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token comment">// &quot;[object Function]&quot;</span>
+
+<span class="token function">toString</span><span class="token punctuation">.</span><span class="token function">call</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">Date</span><span class="token punctuation">)</span><span class="token comment">// &quot;[object Date]&quot;</span>
+
+<span class="token function">toString</span><span class="token punctuation">.</span><span class="token function">call</span><span class="token punctuation">(</span>Math<span class="token punctuation">)</span><span class="token comment">// [object Math]</span>
+
+</code></pre></div><h3 id="constructor"><a href="#constructor" class="header-anchor">#</a> constructor</h3> <p>这种方式是判断对象的构造函数:</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">const</span> a <span class="token operator">=</span> <span class="token keyword">null</span><span class="token punctuation">;</span>
+a<span class="token punctuation">.</span>constructor	<span class="token comment">// 报错：因为 null 是 JS 原型链的起点，没有构造函数；</span>
+
+<span class="token keyword">const</span> b <span class="token operator">=</span> <span class="token keyword">undefined</span><span class="token punctuation">;</span>
+b<span class="token punctuation">.</span>constructor	<span class="token comment">// 报错：它也没有构造函数；</span>
+
+<span class="token keyword">const</span> c <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+c<span class="token punctuation">.</span>constructor <span class="token operator">===</span> Array<span class="token punctuation">;</span>   <span class="token comment">// true	数组</span>
+
+<span class="token keyword">const</span> d <span class="token operator">=</span> <span class="token number">123</span><span class="token punctuation">;</span>
+d<span class="token punctuation">.</span>constructor <span class="token operator">===</span> Number<span class="token punctuation">;</span>  <span class="token comment">// true	数字</span>
+
+<span class="token keyword">const</span> e <span class="token operator">=</span> <span class="token string">'123'</span><span class="token punctuation">;</span>
+e<span class="token punctuation">.</span>constructor <span class="token operator">===</span> String	<span class="token comment">// true	字符串</span>
+
+<span class="token keyword">const</span> f <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token literal-property property">a</span><span class="token operator">:</span> <span class="token number">123</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+f<span class="token punctuation">.</span>constructor <span class="token operator">===</span> Object<span class="token punctuation">;</span>   <span class="token comment">// true 对象</span>
+
+<span class="token keyword">const</span> g <span class="token operator">=</span> <span class="token function">Symbol</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+g<span class="token punctuation">.</span>constructor <span class="token operator">===</span> Symbol	<span class="token comment">// true 符号</span>
+
+<span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span>单独出来讲的几个注意事项<span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span>
+
+<span class="token keyword">const</span> arr <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+arr<span class="token punctuation">.</span>constructor <span class="token operator">===</span> Array	<span class="token comment">// true 数组 能够很好地区分</span>
+
+<span class="token keyword">const</span> <span class="token function-variable function">fun</span> <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token function">a</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token punctuation">}</span><span class="token punctuation">;</span>
+fun<span class="token punctuation">.</span>constructor <span class="token operator">===</span> Function  <span class="token comment">// true 函数</span>
+
+<span class="token keyword">const</span> date <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Date</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+date<span class="token punctuation">.</span>constructor <span class="token operator">===</span> Date<span class="token punctuation">;</span>	 <span class="token comment">// true 日期 </span>
+
+<span class="token keyword">const</span> reg <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">RegExp</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+reg<span class="token punctuation">.</span>constructor <span class="token operator">===</span> RegExp<span class="token punctuation">;</span>	<span class="token comment">// true 正则 </span>
+
+<span class="token keyword">const</span> math <span class="token operator">=</span> Math
+math<span class="token punctuation">.</span>constructor <span class="token operator">===</span> Math<span class="token punctuation">;</span>	<span class="token comment">// false 不可以像Object.prototype.toString.call()一样区分;</span>
+
+abc<span class="token punctuation">.</span>constructor <span class="token operator">===</span> Object   <span class="token comment">// true 事实上没有Math这个构造函数，Math的构造函数在 Object上的</span>
+
+</code></pre></div><h3 id="instanceof"><a href="#instanceof" class="header-anchor">#</a> instanceof</h3> <p>instanceof 用于检测构造函数的 prototype 属性是否出现在某个实例的原型链上.</p> <blockquote><p>instanceof 可以精准判断引用数据类型 Array，Function，Object，而基本数据类型不能被 instanceof 精准判断，因为它本身不是一个实例对象</p></blockquote> <div class="language-js extra-class"><pre class="language-js"><code><span class="token number">2</span> <span class="token keyword">instanceof</span> <span class="token class-name">Number</span>                   <span class="token comment">// false</span>
+
+<span class="token boolean">true</span> <span class="token keyword">instanceof</span> <span class="token class-name">Boolean</span>              <span class="token comment">// false</span>
+
+<span class="token string">'str'</span> <span class="token keyword">instanceof</span> <span class="token class-name">String</span>              <span class="token comment">// false  </span>
+
+<span class="token function">Symbol</span><span class="token punctuation">(</span><span class="token string">'protein'</span><span class="token punctuation">)</span> <span class="token keyword">instanceof</span> <span class="token class-name">Symbol</span>    <span class="token comment">// false</span>
+
+<span class="token keyword">new</span> <span class="token class-name">Number</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span> <span class="token keyword">instanceof</span> <span class="token class-name">Number</span>         <span class="token comment">// true</span>
+
+<span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token keyword">instanceof</span> <span class="token class-name">Array</span>                   <span class="token comment">// true</span>
+
+<span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token punctuation">}</span> <span class="token keyword">instanceof</span> <span class="token class-name">Function</span>     <span class="token comment">// true</span>
+
+<span class="token punctuation">{</span><span class="token punctuation">}</span> <span class="token keyword">instanceof</span> <span class="token class-name">Object</span>               <span class="token comment">// true    </span>
+</code></pre></div><h3 id="总结"><a href="#总结" class="header-anchor">#</a> 总结</h3> <ul><li>typeof运算符适合检测基本数据类型，且返回类型的字符串</li> <li>instanceof运算符适合检测引用类型值</li> <li>constructor、toString.call()返回对象的类型，可以准确判断数值的类型、少数情况下使用toString.call()判断类型会更精确。</li></ul></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/supportRN/" class="prev">
+        React Native 能支持 Typescript 到什么地步?
+      </a></span> <span class="next"><a href="/generator/">
+        Generator 生成器与协程
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.54f8f1fa.js" defer></script><script src="/assets/js/2.2f22998c.js" defer></script><script src="/assets/js/1.0b444f9c.js" defer></script><script src="/assets/js/40.dec6d238.js" defer></script>
+  </body>
+</html>
