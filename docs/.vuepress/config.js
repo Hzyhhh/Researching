@@ -1,6 +1,7 @@
 module.exports = {
   title: "黄梓阳的博客",
   description: "阳阳的博客",
+  base: "/",
   docsDir: "docs",
   themeConfig: {
     sidebar: [
